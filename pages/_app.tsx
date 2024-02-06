@@ -9,7 +9,7 @@ import ModalManager from "@/components/ModalManager";
 
 const App = ({ Component, pageProps }: AppProps) => {
   return (
-    <main className="bg-[#03040B] flex flex-col items-center justify-center p-10 min-h-screen">
+    <>
       <Head>
         <title>Co-Create</title>
         <link rel="icon" href="/favicon.ico" />
@@ -19,7 +19,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         <ModalManager />
         <Component {...pageProps} />
       </RecoilRoot>
-    </main>
+    </>
   );
 };
 

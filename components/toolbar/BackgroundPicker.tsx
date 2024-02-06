@@ -1,7 +1,7 @@
 import { CgScreen } from "react-icons/cg";
 
-import BackgroundModal from "../../modals/BackgroundModal";
 import { useModal } from "@/recoil/modal";
+import BackgroundModal from "@/modals/BackgroundModal";
 
 const BackgroundPicker = () => {
   const { openModal } = useModal();

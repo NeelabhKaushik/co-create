@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 import { FiChevronRight } from "react-icons/fi";
@@ -22,6 +21,7 @@ import { useViewportSize } from "@/hooks/useViewPortSize";
 import ModePicker from "./ModePicker";
 import { CANVAS_SIZE } from "@/constants/canvasSize";
 import { DEFAULT_EASE } from "@/constants/easing";
+import ImagePicker from "./ImagePicker";
 
 const ToolBar = () => {
   const { canvasRef, bgRef } = useRefs();
@@ -89,6 +89,7 @@ const ToolBar = () => {
         <ColorPicker />
         <LineWidthPicker />
         <ModePicker />
+        <ImagePicker />
 
         <div className="2xl:hidden"></div>
         <div className="h-px w-full bg-white 2xl:hidden" />

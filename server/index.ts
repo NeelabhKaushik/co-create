@@ -1,7 +1,5 @@
 import { createServer } from "http";
-
-import {} from "@/types/global";
-
+import {} from "../types/global";
 import express from "express";
 import next, { NextApiHandler } from "next";
 import { Server } from "socket.io";

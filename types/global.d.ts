@@ -91,3 +91,13 @@ export declare global {
     send_msg: (msg: string) => void;
   }
 }
+
+export type TextLayer = {
+  type: LayerType.Text;
+  x: number;
+  y: number;
+  height: number;
+  width: number;
+  fill: Color;
+  value?: string;
+};

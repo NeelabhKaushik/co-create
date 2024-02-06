@@ -55,53 +55,55 @@ const NameInput = () => {
     socket.emit("join_room", roomId, name);
   };
   return (
-    <div className="flex flex-col items-center py-24">
-      <div className="space-y-1">
-        <h2 className="text-stroke animate-title z-10 cursor-default whitespace-nowrap bg-white bg-clip-text text-center text-3xl font-bold text-transparent duration-1000 sm:text-5xl md:text-6xl">
-          BEST BEST BEST
-        </h2>
-        <h1 className="animate-fade-in-3 z-10 cursor-default whitespace-nowrap bg-white bg-gradient-to-r from-purple-300 to-purple-800 bg-clip-text text-center text-4xl font-bold text-transparent duration-1000 sm:text-6xl md:text-7xl">
-          C0-CR3ATE
-        </h1>
-      </div>
-      <div className="flex flex-col space-y-8 md:w-[400px]">
-        <form
-          onSubmit={handleJoinRoom}
-          className="newsletter-form animate-fade-in-3 mt-10"
-        >
-          <div className="shadow-outline-gray focus-within:!shadow-outline-gray-focus group flex items-center gap-x-4 rounded-[9px] bg-[#090D11] py-1 pl-4 pr-1 transition-all duration-300 focus-within:bg-[#15141B] hover:bg-[#15141B] hover:shadow-transparent">
-            <HomeIcon className="hidden h-6 w-6 text-[#4B4C52] transition-colors duration-300 group-focus-within:text-white group-hover:text-white sm:inline" />
-            <input
-              onChange={(e) => setName(e.target.value.slice(0, 15))}
-              placeholder="Enter Your Name"
-              required
-              className="flex-1 bg-transparent text-sm text-white placeholder-[#4B4C52] outline-none placeholder:transition-colors placeholder:duration-300 group-focus-within:placeholder-white sm:text-base"
-            />
-            <button
-              className={`${
-                "" && "active"
-              } text-sm disabled:cursor-not-allowed disabled:!bg-[#17141F] disabled:opacity-50 disabled:grayscale-[65%] md:text-base`}
-              disabled={!input}
-              type="submit"
-            >
-              <span className="default">Join</span>
-              <span className="success">
-                <svg viewBox="0 0 16 16">
-                  <polyline points="3.75 9 7 12 13 5"></polyline>
+    <div className="flex min-h-screen flex-col items-center justify-center bg-[#03040B]">
+      <div className="flex flex-col items-center py-24">
+        <div className="space-y-1">
+          <h2 className="text-stroke animate-title z-10 cursor-default whitespace-nowrap bg-white bg-clip-text text-center text-3xl font-bold text-transparent duration-1000 sm:text-5xl md:text-6xl">
+            BEST BEST BEST
+          </h2>
+          <h1 className="animate-fade-in-3 z-10 cursor-default whitespace-nowrap bg-white bg-gradient-to-r from-purple-300 to-purple-800 bg-clip-text text-center text-4xl font-bold text-transparent duration-1000 sm:text-6xl md:text-7xl">
+            C0-CR3ATE
+          </h1>
+        </div>
+        <div className="flex flex-col space-y-8 md:w-[400px]">
+          <form
+            onSubmit={handleJoinRoom}
+            className="newsletter-form animate-fade-in-3 mt-10"
+          >
+            <div className="shadow-outline-gray focus-within:!shadow-outline-gray-focus group flex items-center gap-x-4 rounded-[9px] bg-[#090D11] py-1 pl-4 pr-1 transition-all duration-300 focus-within:bg-[#15141B] hover:bg-[#15141B] hover:shadow-transparent">
+              <HomeIcon className="hidden h-6 w-6 text-[#4B4C52] transition-colors duration-300 group-focus-within:text-white group-hover:text-white sm:inline" />
+              <input
+                onChange={(e) => setName(e.target.value.slice(0, 15))}
+                placeholder="Enter Your Name"
+                required
+                className="flex-1 bg-transparent text-sm text-white placeholder-[#4B4C52] outline-none placeholder:transition-colors placeholder:duration-300 group-focus-within:placeholder-white sm:text-base"
+              />
+              <button
+                className={`${
+                  "" && "active"
+                } text-sm disabled:cursor-not-allowed disabled:!bg-[#17141F] disabled:opacity-50 disabled:grayscale-[65%] md:text-base`}
+                disabled={!input}
+                type="submit"
+              >
+                <span className="default">Join</span>
+                <span className="success">
+                  <svg viewBox="0 0 16 16">
+                    <polyline points="3.75 9 7 12 13 5"></polyline>
+                  </svg>
+                  Done
+                </span>
+                <svg className="trails" viewBox="0 0 33 64">
+                  <path d="M26,4 C28,13.3333333 29,22.6666667 29,32 C29,41.3333333 28,50.6666667 26,60"></path>
+                  <path d="M6,4 C8,13.3333333 9,22.6666667 9,32 C9,41.3333333 8,50.6666667 6,60"></path>
                 </svg>
-                Done
-              </span>
-              <svg className="trails" viewBox="0 0 33 64">
-                <path d="M26,4 C28,13.3333333 29,22.6666667 29,32 C29,41.3333333 28,50.6666667 26,60"></path>
-                <path d="M6,4 C8,13.3333333 9,22.6666667 9,32 C9,41.3333333 8,50.6666667 6,60"></path>
-              </svg>
-              <div className="plane">
-                <div className="left"></div>
-                <div className="right"></div>
-              </div>
-            </button>
-          </div>
-        </form>
+                <div className="plane">
+                  <div className="left"></div>
+                  <div className="right"></div>
+                </div>
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   );
