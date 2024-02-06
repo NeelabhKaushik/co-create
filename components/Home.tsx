@@ -16,7 +16,6 @@ const Home = () => {
 
   const [roomId, setRoomId] = useState("");
   const [username, setUsername] = useState("");
-  console.log(username);
 
   const router = useRouter();
 
@@ -54,7 +53,6 @@ const Home = () => {
 
   const handleCreateRoom = () => {
     socket.emit("create_room", username);
-    console.log("created ", username);
   };
 
   const handleJoinRoom = (e: FormEvent<HTMLFormElement>) => {

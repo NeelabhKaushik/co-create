@@ -14,7 +14,6 @@ import ToolBar from "./toolbar/ToolBar";
 
 const Room = () => {
   const room = useRoom();
-  console.log(room);
 
   if (!room.id) return <NameInput />;
 
