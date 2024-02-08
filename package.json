@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "nodemon server/index.ts",
     "dev:client": "ts-node server/index.ts",
-    "build:server": "tsc --project tsconfig.server.json",
+    "build:server": "tsc --project tsconfig.json",
     "build:next": "next build",
     "build": "npm-run-all build:*",
     "start": "NODE_ENV=production node build/index.js",
