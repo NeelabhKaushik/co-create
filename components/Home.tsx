@@ -89,7 +89,7 @@ const Home = () => {
                 disabled={!input}
                 onClick={handleCreateRoom}
               >
-                <span className="default">Join</span>
+                <span className="default">Create</span>
 
                 <div className="plane">
                   <div className="left"></div>
